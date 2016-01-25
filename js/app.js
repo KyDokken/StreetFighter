@@ -35,3 +35,40 @@ $(document).ready(function () {
         $('.ryu-still').show();
     });
 });
+
+$(document).keydown(function (key) {
+    if (key.keyCode == 88) {
+        $('.try-action').hide(); // Same as above, hide all 4
+        $('.ryu-cool').show();
+        playcool()
+    }
+});
+
+$(document).keyup(function (key) {
+    if (key.keyCode == 88) {
+        $('ryu-action').hide();
+        $('ryu-still').show();
+        $('#cool')[0].pause();
+    }
+})
+
+/* Sound */
+var hadoukenSound = false;
+
+function playHadouken() {
+    hadoukenSound = !hadoukenSound;
+    if (hadoukenSound) {
+        $('#hadouken-sound')[0].volume = 0.5;
+        $('#hadouken-sound')[0].load();
+        $('#hadouken-sound')[0].play();
+    }
+}
+
+var coolSound = false;
+
+function playCool() {
+    coolSound = !coolSound;
+    if (coolSound) {
+        $('#cool')[0].play();
+    }
+}
