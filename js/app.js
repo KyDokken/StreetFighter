@@ -38,9 +38,9 @@ $(document).ready(function () {
 
 $(document).keydown(function (key) {
     if (key.keyCode == 88) {
-        $('.try-action').hide(); // Same as above, hide all 4
+        $('.ryu-still').hide(); // Same as above, hide all 4
         $('.ryu-cool').show();
-        playcool()
+        playCool();
     }
 });
 

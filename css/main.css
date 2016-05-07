@@ -3,7 +3,6 @@
 */
 
 * {
-    outline: red 1px solid;
     margin: 0;
     padding: 0;
     border: 0;
@@ -28,10 +27,13 @@
 
 body {
     background-color: black;
+    background-image: url(../images/platform.jpeg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
 }
 
 .main {
-    background-color: white;
     margin-top: 110px;
     padding-left: 100px;
     min-width: 1200px;
